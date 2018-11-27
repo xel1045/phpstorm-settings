@@ -1,0 +1,44 @@
+<keymap version="1" name="Default copy" parent="Mac OS X 10.5+">
+  <action id="CodeGlance.toggle" />
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="meta alt e_with_acute" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta slash" />
+    <keyboard-shortcut first-keystroke="meta divide" />
+    <keyboard-shortcut first-keystroke="meta e_with_acute" />
+  </action>
+  <action id="ConvertIndentsToSpaces">
+    <keyboard-shortcut first-keystroke="shift ctrl meta s" />
+  </action>
+  <action id="ConvertIndentsToTabs">
+    <keyboard-shortcut first-keystroke="shift ctrl meta t" />
+  </action>
+  <action id="GotoTest" />
+  <action id="Images.ShowThumbnails" />
+  <action id="ManageRecentProjects">
+    <keyboard-shortcut first-keystroke="shift meta p" />
+  </action>
+  <action id="ReopenClosedTab">
+    <keyboard-shortcut first-keystroke="shift meta t" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="ctrl alt enter" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="VcsHistory.ShowAllAffected" />
+  <action id="intellij.frontendalignement.AlignItAction">
+    <keyboard-shortcut first-keystroke="ctrl meta a" />
+  </action>
+</keymap>

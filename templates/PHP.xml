@@ -1,0 +1,8 @@
+<templateSet group="PHP">
+  <template name="&lt;?=" value="&lt;?php echo $END$; ?&gt;" description="Full PHP tag with echo" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

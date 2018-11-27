@@ -1,0 +1,371 @@
+<templateSet group="Alex">
+  <template name="gs" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$()&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}&#10;&#10;/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($$$VARIABLE$)&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Getter/Setter" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tp" value="/**&#10; * @dataProvider provideTest$NAME$&#10; */&#10;public function test$NAME$($ARGUMENTS$)&#10;{&#10;&#9;$END$&#10;}&#10;&#10;public function provideTest$NAME$()&#10;{&#10;&#9;return [&#10;&#9;&#9;$PROVIDER$&#10;&#9;];&#10;}" description="phpUnit test with a provider" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROVIDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tgs" value="public function testGet$NAME$Default()&#10;{&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($DEFAULT$);&#10;}&#10;&#10;public function test$NAME$IsMutable()&#10;{&#10;&#9;$expected = $EXPECTED$;&#10;&#10;&#9;$this-&gt;spec-&gt;set$NAME$($expected);&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($expected);&#10;}" description="Test unit - Getter and setter" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Something&quot;" alwaysStopAt="true" />
+    <variable name="DEFAULT" expression="" defaultValue="&quot;null&quot;" alwaysStopAt="true" />
+    <variable name="EXPECTED" expression="" defaultValue="&quot;'foo'&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tuf" value="public function test$NAME$IsFluent()&#10;{&#10;&#9;$this-&gt;spec-&gt;$METHOD$($VALUE$)-&gt;shouldReturn($this-&gt;spec);&#10;}" description="Test unit - Fluent interface" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="&quot;'foo'&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(METHOD)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tum" value="&lt;?php namespace unit;&#10;&#10;use Ditto\Ditto as d;&#10;use Mockery as m;&#10;use $MODEL_NAME$;&#10;&#10;class $MODEL_NAME$Test extends \TestCase {&#10;&#9;/**&#10;&#9; * @var \$MODEL_NAME$&#10;&#9; */&#10;&#9;protected $model;&#10;&#10;&#9;/**&#10;&#9; * @var \Ditto\Ditto&#10;&#9; */&#10;&#9;protected $spec;&#10;&#10;&#9;public function setUp()&#10;&#9;{&#10;&#9;&#9;parent::setUp();&#10;&#10;&#9;&#9;$this-&gt;model = new $MODEL_NAME$();&#10;&#9;&#9;$this-&gt;spec  = d::make($this-&gt;model);&#10;&#9;}&#10;&#10;&#9;//==========================================================================&#10;&#9;// Initialisation&#10;&#9;//==========================================================================&#10;&#10;&#9;public function testItIsInitializable()&#10;&#9;{&#10;&#9;&#9;$this-&gt;spec-&gt;shouldHaveType('$MODEL_NAME$');&#10;&#9;}&#10;}&#10;" description="Test a model unitary" toReformat="true" toShortenFQNames="true">
+    <variable name="MODEL_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tumr" value="public function test$NAME$Relation()&#10;{&#10;&#9;$this-&gt;spec-&gt;$RELATION$()-&gt;shouldHaveType('Illuminate\Database\Eloquent\Relations\$INSTANCE_OF$');&#10;}" description="Test unit - Model relation" toReformat="true" toShortenFQNames="true">
+    <variable name="RELATION" expression="" defaultValue="&quot;relation&quot;" alwaysStopAt="true" />
+    <variable name="INSTANCE_OF" expression="" defaultValue="&quot;BelongsTo&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(RELATION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="csep" value="//==========================================================================&#10;// $NAME$&#10;//==========================================================================" description="Class comment separator" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="__" value="{{ __('$VARIABLE$') }}" description="Laravel Translation" toReformat="true" toShortenFQNames="true">
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="todo" value="// TODO-AD: $COMMENT$ &lt;adeschambeault@exolnet.com&gt;" description="TODO" toReformat="true" toShortenFQNames="true">
+    <variable name="COMMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="blt" value="&lt;?php&#10;&#10;return [&#10;&#9;'$VARIABLE$' =&gt; $VALUE$,&#10;];&#10;" description="Base language template" toReformat="true" toShortenFQNames="true">
+    <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="''" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="g" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$()&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}" description="Getter" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="s" value="/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($$$VARIABLE$)&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Setter" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
+    <variable name="VARIABLE" expression="camelCase(PROPERTY)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tfok" value="public function test$NAME$$ACTION_NAME$()&#10;{&#10;&#9;$this-&gt;$ACTION$('$ROUTE$'$END$);&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}" description="Test functionnal - Response Ok" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Index&quot;" alwaysStopAt="true" />
+    <variable name="ACTION" expression="enum(&quot;get&quot;, &quot;post&quot;, &quot;put&quot;, &quot;patch&quot;, &quot;delete&quot;, &quot;head&quot;)" defaultValue="&quot;get&quot;" alwaysStopAt="true" />
+    <variable name="ROUTE" expression="" defaultValue="&quot;home&quot;" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="capitalize(ACTION)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tfre" value="public function test$NAME$RouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('$METHOD$', '$PATH$');&#10;&#9;$this-&gt;assertRouteMatchesAction('$METHOD$', '$PATH$', '$CONTROLLER$@$ACTION$');&#10;}" description="Test functionnal - Route exists" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD" expression="enum(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;, &quot;HEAD&quot;)" defaultValue="&quot;GET&quot;" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="&quot;home&quot;" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="&quot;NameController&quot;" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="&quot;index&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(ACTION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tfm" value="public function test$NAME$$ACTION_NAME$Missing()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$this-&gt;$ACTION$('$ROUTE$');&#10;}" description="Test functionnal - Missing" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Show&quot;" alwaysStopAt="true" />
+    <variable name="ACTION" expression="enum(&quot;get&quot;, &quot;post&quot;, &quot;put&quot;, &quot;patch&quot;, &quot;delete&quot;, &quot;head&quot;)" defaultValue="&quot;get&quot;" alwaysStopAt="true" />
+    <variable name="ROUTE" expression="" defaultValue="&quot;show/0&quot;" alwaysStopAt="true" />
+    <variable name="ACTION_NAME" expression="capitalize(ACTION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tfb" value="&lt;?php namespace functional$NAMESPACE$;&#10;&#10;class $NAME$Test extends \TestCaseFunctional&#10;{&#10;&#9;$END$&#10;}&#10;" description="Test functionnal - Base template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAMESPACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tfcrud" value="//==========================================================================&#10;// Index&#10;//==========================================================================&#10;&#10;public function testIndexRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$ROUTE$');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$ROUTE$', '$CONTROLLER$@index');&#10;}&#10;&#10;public function testIndexGet()&#10;{&#10;&#9;$$this$AUTH$-&gt;get('$ROUTE$');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}&#10;&#10;//==========================================================================&#10;// Create&#10;//==========================================================================&#10;&#10;public function testCreateRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$ROUTE$/create');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$ROUTE$/create', '$CONTROLLER$@create');&#10;}&#10;&#10;public function testCreateGet()&#10;{&#10;&#9;$$this$AUTH$-&gt;get('$ROUTE$/create');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}&#10;&#10;//==========================================================================&#10;// Store&#10;//==========================================================================&#10;&#10;public function testStoreRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('POST', '$ROUTE$');&#10;&#9;$this-&gt;assertRouteMatchesAction('POST', '$ROUTE$', '$CONTROLLER$@store');&#10;}&#10;&#10;public function testStorePost()&#10;{&#10;&#9;$$this$AUTH$-&gt;post('$ROUTE$', [&#10;&#9;&#9;$VALID_DATA$&#10;&#9;]);&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$');&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function testStoreEmptyPost()&#10;{&#10;&#9;$$this$AUTH$-&gt;post('$ROUTE$');&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$/create');&#10;&#9;$this-&gt;assertNotice('error');&#10;}&#10;&#10;//==========================================================================&#10;// Show&#10;//==========================================================================&#10;&#10;public function testShowRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$ROUTE$/$ID$');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$ROUTE$/$ID$', '$CONTROLLER$@show');&#10;}&#10;&#10;public function testShowGet()&#10;{&#10;&#9;$$this$AUTH$-&gt;get('$ROUTE$/$ID$');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}&#10;&#10;public function testShowMissingGet()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$$this$AUTH$-&gt;get('$ROUTE$/$ID_MISSING$');&#10;}&#10;&#10;//==========================================================================&#10;// Edit&#10;//==========================================================================&#10;&#10;public function testEditRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$ROUTE$/$ID$/edit');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$ROUTE$/$ID$/edit', '$CONTROLLER$@edit');&#10;}&#10;&#10;public function testEditGet()&#10;{&#10;&#9;$$this$AUTH$-&gt;get('$ROUTE$/$ID$/edit');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}&#10;&#10;public function testEditMissingGet()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$this-&gt;get('$ROUTE$/$ID_MISSING$/edit');&#10;}&#10;&#10;//==========================================================================&#10;// Update&#10;//==========================================================================&#10;&#10;public function testUpdateRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('PUT', '$ROUTE$/$ID$');&#10;&#9;$this-&gt;assertRouteMatchesAction('PUT', '$ROUTE$/$ID$', '$CONTROLLER$@update');&#10;}&#10;&#10;public function testUpdateMissingPost()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$$this$AUTH$-&gt;put('$ROUTE$/0');&#10;}&#10;&#10;public function testUpdatePost()&#10;{&#10;&#9;$$this$AUTH$-&gt;put('$ROUTE$/$ID$', [&#10;&#9;&#9;$VALID_DATA$&#10;&#9;]);&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$');&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function testUpdateEmptyPost()&#10;{&#10;&#9;$$this$AUTH$-&gt;put('$ROUTE$/$ID$');&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$/$ID$/edit');&#10;&#9;$this-&gt;assertNotice('error');&#10;}&#10;&#10;public function testUpdateInvalidPost()&#10;{&#10;&#9;$$this$AUTH$-&gt;put('$ROUTE$/$ID$', [&#10;&#9;&#9;$INVALID_DATA$&#10;&#9;]);&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$/$ID$/edit');&#10;&#9;$this-&gt;assertNotice('error');&#10;}&#10;&#10;//==========================================================================&#10;// Destroy&#10;//==========================================================================&#10;&#10;public function testDestroyRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('DELETE', '$ROUTE$/$ID$');&#10;&#9;$this-&gt;assertRouteMatchesAction('DELETE', '$ROUTE$/$ID$', '$CONTROLLER$@destroy');&#10;}&#10;&#10;public function testDestroyGet()&#10;{&#10;&#9;$$this$AUTH$-&gt;delete('$ROUTE$/$ID$');&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$ROUTE$');&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function testDestroyMissingGet()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$$this$AUTH$-&gt;delete('$ROUTE$/$ID_MISSING$');&#10;}" description="Test function - CRUD testing" toReformat="true" toShortenFQNames="true">
+    <variable name="ROUTE" expression="" defaultValue="&quot;home&quot;" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="&quot;HomeController&quot;" alwaysStopAt="true" />
+    <variable name="AUTH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ID" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <variable name="ID_MISSING" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="VALID_DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INVALID_DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="c" value="public function __construct($ARGUMENTS$)&#10;{&#10;&#9;$END$&#10;}" description="PHP constructor" toReformat="true" toShortenFQNames="true">
+    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="cf" value="/**&#10; * Copyright © $YEAR$ eXolnet Inc. All rights reserved. (http://www.exolnet.com)&#10; *&#10; * This file contains copyrighted code that is the sole property of eXolnet Inc.&#10; * You may not use this file except with a written agreement.&#10; *&#10; * This code is distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND,&#10; * EITHER EXPRESS OR IMPLIED, AND EXOLNET INC. HEREBY DISCLAIMS ALL SUCH&#10; * WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,&#10; * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.&#10; *&#10; * @package    $PACKAGE$&#10; * @subpackage $SUBPACKAGE$&#10; * @author     eXolnet Inc. &lt;info@exolnet.com&gt;&#10; */" description="eXolnet's file copyright" toReformat="true" toShortenFQNames="true">
+    <variable name="PACKAGE" expression="" defaultValue="&quot;Package&quot;" alwaysStopAt="true" />
+    <variable name="SUBPACKAGE" expression="" defaultValue="&quot;Subpackage&quot;" alwaysStopAt="true" />
+    <variable name="YEAR" expression="" defaultValue="&quot;2014&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="CoffeeScript" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tugso" value="public function testGet$NAME$Default()&#10;{&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($DEFAULT$);&#10;}&#10;&#10;public function test$NAME$IsMutable()&#10;{&#10;&#9;$expected = m::mock('$OBJECT$');&#10;&#9;$expected-&gt;shouldReceive('getAttribute')-&gt;with('id')-&gt;andReturn(1);&#10;&#10;&#9;$this-&gt;spec-&gt;set$NAME$($expected);&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($expected);&#10;}&#10;&#10;public function testSet$NAME$IsFluent()&#10;{&#10;&#9;$value = m::mock('$OBJECT$');&#10;&#9;$value-&gt;shouldReceive('getAttribute')-&gt;with('id')-&gt;andReturn(1);&#10;&#10;&#9;$this-&gt;spec-&gt;set$NAME$($value)-&gt;shouldReturn($this-&gt;spec);&#10;}" description="Test unit - Getter and setter object" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Something&quot;" alwaysStopAt="true" />
+    <variable name="DEFAULT" expression="" defaultValue="&quot;null&quot;" alwaysStopAt="true" />
+    <variable name="OBJECT" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tugs" value="public function testGet$NAME$Default()&#10;{&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($DEFAULT$);&#10;}&#10;&#10;public function test$NAME$IsMutable()&#10;{&#10;&#9;$expected = $EXPECTED$;&#10;&#10;&#9;$this-&gt;spec-&gt;set$NAME$($expected);&#10;&#9;$this-&gt;spec-&gt;get$NAME$()-&gt;shouldReturn($expected);&#10;}&#10;&#10;public function testSet$NAME$IsFluent()&#10;{&#10;&#9;$this-&gt;spec-&gt;set$NAME$($EXPECTED$)-&gt;shouldReturn($this-&gt;spec);&#10;}" description="Test unit - Getter and setter" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Something&quot;" alwaysStopAt="true" />
+    <variable name="DEFAULT" expression="" defaultValue="&quot;null&quot;" alwaysStopAt="true" />
+    <variable name="EXPECTED" expression="" defaultValue="&quot;'foo'&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="@deprecated" value="@deprecated Will be removed in v$VERSION$. Use @{link $ALIAS$()} instead." description="phpDoc deprecated tag" toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="" defaultValue="&quot;X.Y.Z&quot;" alwaysStopAt="true" />
+    <variable name="ALIAS" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="calias" value="Alias of @{link $ALIAS$()}." description="phpDoc alias comment description." toReformat="true" toShortenFQNames="true">
+    <variable name="ALIAS" expression="" defaultValue="&quot;method&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="gsi" value="public function get$NAME$();&#10;&#10;public function set$NAME$($TYPE$$$$LC_NAME_CAMEL$);" description="Getter/Setter for interface" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LC_NAME_CAMEL" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="pubf;" value="public function $NAME$($PARAMETERS$);" description="Public interface" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETERS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ti" value="//==========================================================================&#10;// Index&#10;//==========================================================================&#10;&#10;public function testIndexRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', $BASE_PATH$);&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', $BASE_PATH$, $CONTROLLER$.'@index');&#10;}&#10;&#10;public function testIndexGet()&#10;{&#10;&#9;$this-&gt;get($BASE_PATH$);&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}" description="Test index" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tc" value="//==========================================================================&#10;// Create&#10;//==========================================================================&#10;&#10;public function testCreateRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$BASE_PATH$/create');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$BASE_PATH$/create', $CONTROLLER$.'@create');&#10;}&#10;&#10;public function testCreateGet()&#10;{&#10;&#9;$this-&gt;get('$BASE_PATH$/create');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}" description="Test create" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ts" value="//==========================================================================&#10;// Store&#10;//==========================================================================&#10;&#10;public function testStoreRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('POST', $BASE_PATH$);&#10;&#9;$this-&gt;assertRouteMatchesAction('POST', $BASE_PATH$, $CONTROLLER$.'@store');&#10;}&#10;&#10;public function testStorePost()&#10;{&#10;&#9;$data = [];&#10;&#9;$this-&gt;post($BASE_PATH$, $data);&#10;&#10;&#9;$this-&gt;displayErrors();&#10;&#9;$this-&gt;assertRedirectedTo($this-&gt;storeRedirect());&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function storeRedirect()&#10;{&#10;&#9;return $BASE_PATH$;&#10;}&#10;&#10;public function testStoreEmptyPost()&#10;{&#10;&#9;$this-&gt;post($BASE_PATH$);&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$BASE_PATH$/create');&#10;&#9;$this-&gt;assertNotice('error');&#10;}" description="Test store" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="te" value="//==========================================================================&#10;// Edit&#10;//==========================================================================&#10;&#10;public function testEditRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('GET', '$BASE_PATH$/1/edit');&#10;&#9;$this-&gt;assertRouteMatchesAction('GET', '$BASE_PATH$/1/edit', $CONTROLLER$.'@edit');&#10;}&#10;&#10;public function testEditGet()&#10;{&#10;&#9;$this-&gt;get('$BASE_PATH$/1/edit');&#10;&#10;&#9;$this-&gt;assertResponseOk();&#10;}" description="Test edit" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tu" value="//==========================================================================&#10;// Update&#10;//==========================================================================&#10;&#10;public function testUpdateRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('PUT', '$BASE_PATH$/1');&#10;&#9;$this-&gt;assertRouteMatchesAction('PUT', '$BASE_PATH$/1', $CONTROLLER$.'@update');&#10;}&#10;&#10;public function testUpdateMissingPost()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$this-&gt;put('$BASE_PATH$/0');&#10;}&#10;&#10;public function testUpdatePost()&#10;{&#10;&#9;$data = [];&#10;&#9;$this-&gt;put('$BASE_PATH$/1', $data);&#10;&#10;&#9;$this-&gt;displayErrors();&#10;&#9;$this-&gt;assertRedirectedTo($this-&gt;updateRedirect());&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function updateRedirect()&#10;{&#10;&#9;return $BASE_PATH$;&#10;}&#10;&#10;public function testUpdateEmptyPost()&#10;{&#10;&#9;$this-&gt;put('$BASE_PATH$/1');&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$BASE_PATH$/1/edit');&#10;&#9;$this-&gt;assertNotice('error');&#10;}&#10;&#10;public function testUpdateInvalidPost()&#10;{&#10;&#9;$data = [];&#10;&#9;$this-&gt;put('$BASE_PATH$/1', $data);&#10;&#10;&#9;$this-&gt;assertRedirectedTo('$BASE_PATH$/1/edit');&#10;&#9;$this-&gt;assertNotice('error');&#10;}" description="Test update" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="td" value="//==========================================================================&#10;// Destroy&#10;//==========================================================================&#10;&#10;public function testDestroyRouteExists()&#10;{&#10;&#9;$this-&gt;assertRouteExists('DELETE', '$BASE_PATH$/1');&#10;&#9;$this-&gt;assertRouteMatchesAction('DELETE', '$BASE_PATH$/1', $CONTROLLER$.'@destroy');&#10;}&#10;&#10;public function testDestroyGet()&#10;{&#10;&#9;$this-&gt;delete('$BASE_PATH$/1');&#10;&#10;&#9;$this-&gt;displayErrors();&#10;&#9;$this-&gt;assertRedirectedTo($this-&gt;destroyRedirect());&#10;&#9;$this-&gt;assertNotice('success');&#10;}&#10;&#10;public function destroyRedirect()&#10;{&#10;&#9;return $BASE_PATH$;&#10;}&#10;&#10;public function testDestroyMissingGet()&#10;{&#10;&#9;$this-&gt;expectResponseMissing();&#10;&#10;&#9;$this-&gt;delete('$BASE_PATH$/0');&#10;}" description="Test destroy" toReformat="true" toShortenFQNames="true">
+    <variable name="BASE_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="t" value="public function test$NAME$($ARGUMENTS$)&#10;{&#10;&#9;$END$&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="f" value="function($ARGUMENTS$) {&#10;&#9;$END$&#10;}" description="Anonymous function" toReformat="true" toShortenFQNames="true">
+    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ej" value="adeschambeault@exolnet.com" description="adeschambeault@exolnet.com" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="eb" value="info@exolnet.com" description="info@exolnet.com" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ep" value="xel1045@gmail.com" description="xel1045@gmail.com" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="cl" value="console.log($END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="AS" value="{{ asset('$SELECTION$') }}" description="Surround with {{ asset() }}" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="lr" value="Route::$METHOD$('$ROUTE$', [&#10;&#9;'as'   =&gt; '$NAME$',&#10;&#9;'uses' =&gt; '$CONTROLLER$',&#10;]);" description="Laravel Route" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD" expression="" defaultValue="&quot;get&quot;" alwaysStopAt="true" />
+    <variable name="ROUTE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="lg" value="Route::group([$ATTRIBUTES$], function() {&#10;&#9;$END$&#10;});" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="ATTRIBUTES" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="lce" value="\Illuminate\Database\Eloquent\Collection" description="\Illuminate\Database\Eloquent\Collection" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="lc" value="\Illuminate\Support\Collection" description="\Illuminate\Support\Collection" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="pl" value="https://placehold.it/$WIDTH$x$HEIGHT$" description="placehold.it" toReformat="true" toShortenFQNames="true">
+    <variable name="WIDTH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HEIGHT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="bsfl" value="{!! Form::label('$ID$', '$NAME$', ['class' =&gt; 'control-label$CLASSES$']) !!}" description="Form::label" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASSES" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ad" value="app.directive('$NAME$', function() {&#10;&#9;return {&#10;&#9;&#9;restrict: &quot;A&quot;,&#10;&#9;&#9;link: function(scope, element, attr) {&#10;&#9;&#9;&#9;$END$&#10;&#9;&#9;}&#10;&#9;};&#10;});&#10;" description="Angular Directive" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="gsbtm" value="/**&#10; * @return \Illuminate\Database\Eloquent\Collection&#10; */&#10;public function get$UCNAME$s()&#10;{&#10;&#9;return $this-&gt;$NAME$s;&#10;}&#10;&#10;/**&#10; * @param array $$$VNAME$s&#10; * @return $this&#10; */&#10;public function set$UCNAME$s(array $$$VNAME$s)&#10;{&#10;&#9;return $this-&gt;clear$UCNAME$s()-&gt;add$UCNAME$s($$$VNAME$s);&#10;}&#10;&#10;/**&#10; * @return $this&#10; */&#10;public function clear$UCNAME$s()&#10;{&#10;&#9;$this-&gt;$NAME$s()-&gt;detach();&#10;&#10;&#9;return $this;&#10;}&#10;&#10;/**&#10; * @param $NAMESPACE$ $$$VNAME$&#10; * @return $this&#10; */&#10;public function add$UCNAME$($CLASSNAME$ $$$VNAME$)&#10;{&#10;&#9;$this-&gt;$NAME$s()-&gt;save($$$VNAME$);&#10;&#10;&#9;return $this;&#10;}&#10;&#10;/**&#10; * @param array $$$VNAME$s&#10; * @return $this&#10; */&#10;public function add$UCNAME$s(array $$$VNAME$s)&#10;{&#10;&#9;$this-&gt;$NAME$s()-&gt;saveMany($$$VNAME$s);&#10;&#10;&#9;return $this;&#10;}&#10;&#10;/**&#10; * @return int&#10; */&#10;public function count$UCNAME$s()&#10;{&#10;&#9;return count($this-&gt;get$UCNAME$s());&#10;}&#10;&#10;/**&#10; * @return bool&#10; */&#10;public function has$UCNAME$s()&#10;{&#10;&#9;return $this-&gt;count$UCNAME$s() &gt; 0;&#10;}" description="Getter/setter for belongsToMany relations" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;relation&quot;" alwaysStopAt="true" />
+    <variable name="UCNAME" expression="capitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="VNAME" expression="decapitalize(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAMESPACE" expression="" defaultValue="mixed" alwaysStopAt="true" />
+    <variable name="CLASSNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="jsce" value="'use strict';&#10;&#10;customElements.define('$NAME$', class extends HTMLElement {&#10;&#9;static get observeAttributes() {&#10;&#9;&#10;&#9;}&#10;&#9;&#10;&#9;constructor() {&#10;&#9;&#9;super();&#10;&#9;}&#10;&#9;&#10;&#9;connectedCallback() {&#10;&#9;&#10;&#9;}&#10;&#9;&#10;&#9;disconnectedCallback() {&#10;&#9;&#10;&#9;}&#10;&#9;&#10;&#9;attributeChangedCallback(name, oldValue, newValue) {&#10;&#9;&#10;&#9;}&#10;});" description="JavaScript Custom Element" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="msgid" value="msgid &quot;$msgid$&quot;&#10;msgstr &quot;$msgstr$&quot;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="msgid" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="msgstr" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="_e" value="&lt;?php _e('$TEXT$', '$DOMAIN$'); ?&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="&quot;connectngo&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="false" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP Expression" value="false" />
+      <option name="PHP Statement" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="XDEBUG" value="XDEBUG_SESSION_START=PHPSTORM" description="XDEBUG URL" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

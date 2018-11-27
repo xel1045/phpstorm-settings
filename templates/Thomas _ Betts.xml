@@ -1,0 +1,37 @@
+<templateSet group="Thomas &amp; Betts">
+  <template name="tnbc" value="##############&#10;# CHAPTER $NUM$ #&#10;##############&#10;- title:&#10;  en: &quot;$EN$&quot;&#10;  fr: &quot;$FR$&quot;&#10;  $END$" shortcut="SPACE" description="Chapter" toReformat="false" toShortenFQNames="true">
+    <variable name="NUM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tnbq" value="- question:&#10;    en: &quot;$EN$&quot;&#10;    fr: &quot;$FR$&quot;&#10;  answer: $ANSWER$&#10;  choices:&#10;    $END$" shortcut="SPACE" description="Question" toReformat="false" toShortenFQNames="true">
+    <variable name="EN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ANSWER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tnbqc" value="- en: &quot;$EN$&quot;&#10;  fr: &quot;$FR$&quot;&#10;$END$" shortcut="SPACE" description="Quiz Choice" toReformat="false" toShortenFQNames="true">
+    <variable name="EN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tnbtf" value="- en: &quot;True&quot;&#10;  fr: &quot;Vrai&quot;&#10;- en: &quot;False&quot;&#10;  fr: &quot;Faux&quot;&#10;$END$" shortcut="SPACE" description="Quiz Choice True/False" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tnbe" value="explanation:&#10;  en: &quot;$EN$&quot;&#10;  fr: &quot;$FR$&quot;&#10;$END$" shortcut="SPACE" description="Quiz Explanation" toReformat="false" toShortenFQNames="true">
+    <variable name="EN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
