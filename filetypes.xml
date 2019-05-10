@@ -4,6 +4,7 @@
     <extensionMap>
       <mapping pattern="installer" type="PHP" />
       <mapping pattern="compile" type="PHP" />
+      <mapping pattern="exo-craft" type="PHP" />
       <mapping pattern="RoyalPhotoIndexer" type="PHP" />
       <mapping pattern="EmployeeService" type="PHP" />
       <mapping pattern="exolnet-scaffold" type="PHP" />
