@@ -43,6 +43,8 @@
       <mapping ext="bak" type="PLAIN_TEXT" />
       <mapping ext="keys" type="PLAIN_TEXT" />
       <mapping ext="j2" type="Twig" />
+      <mapping pattern=".ebextensions/autoscaling.config" type="YAML" />
+      <mapping ext="config" type="YAML" />
       <mapping pattern=".gitignore_global" type="Git file" />
     </extensionMap>
   </component>
