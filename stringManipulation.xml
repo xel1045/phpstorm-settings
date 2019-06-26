@@ -1,9 +1,9 @@
 <application>
   <component name="StringManipulationState">
-    <option name="donationNagger">
-      <DonationNagger>
-        <option name="actionsExecuted" value="11" />
-      </DonationNagger>
+    <option name="sortSettings">
+      <SortSettings>
+        <option name="sortType" value="REVERSE" />
+      </SortSettings>
     </option>
   </component>
 </application>
