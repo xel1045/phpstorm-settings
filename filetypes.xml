@@ -16,6 +16,7 @@
       <mapping pattern="DashboardWrapper" type="PLAIN_TEXT" />
       <mapping pattern="MigrateCommand" type="PLAIN_TEXT" />
       <mapping pattern="Gemfile" type="PLAIN_TEXT" />
+      <mapping pattern="id_rsa" type="PLAIN_TEXT" />
       <mapping pattern=".env.development" type="PLAIN_TEXT" />
       <mapping pattern="ScenarioAnalysisUnaffecting" type="PLAIN_TEXT" />
       <mapping pattern="README" type="PLAIN_TEXT" />
@@ -25,14 +26,14 @@
       <mapping pattern="FormTableInlineAdd" type="PLAIN_TEXT" />
       <mapping pattern="TagSet" type="PLAIN_TEXT" />
       <mapping pattern="VERSION" type="PLAIN_TEXT" />
-      <mapping pattern="EventUser" type="PLAIN_TEXT" />
       <mapping pattern="Jenkinsfile" type="PLAIN_TEXT" />
       <mapping pattern="kohana-to-laravel-migrator" type="PLAIN_TEXT" />
-      <mapping pattern="id_rsa" type="PLAIN_TEXT" />
+      <mapping pattern="EventUser" type="PLAIN_TEXT" />
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping pattern="REVISION" type="PLAIN_TEXT" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping ext="dat" type="PLAIN_TEXT" />
+      <mapping ext="webmanifest" type="PLAIN_TEXT" />
       <mapping ext="gitkeep" type="PLAIN_TEXT" />
       <mapping ext="gitignore" type="PLAIN_TEXT" />
       <mapping ext="example" type="PLAIN_TEXT" />
