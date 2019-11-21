@@ -1,7 +1,8 @@
 <templateSet group="Alex">
-  <template name="gs" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$()&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}&#10;&#10;/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($$$VARIABLE$)&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Getter/Setter" toReformat="true" toShortenFQNames="true">
+  <template name="gs" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$(): $RETURN$&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}&#10;&#10;/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($RETURN$ $$$VARIABLE$): self&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Getter/Setter" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
     <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="RETURN" expression="TYPE" defaultValue="" alwaysStopAt="true" />
     <variable name="VARIABLE" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
     <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
     <context>
@@ -75,17 +76,19 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="g" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$()&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}" description="Getter" toReformat="true" toShortenFQNames="true">
+  <template name="g" value="/**&#10; * @return $TYPE$&#10; */&#10;public function get$NAME$(): $RETURN$&#10;{&#10;&#9;return $this-&gt;$PROPERTY$;&#10;}" description="Getter" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
     <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="RETURN" expression="TYPE" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="s" value="/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($$$VARIABLE$)&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Setter" toReformat="true" toShortenFQNames="true">
+  <template name="s" value="/**&#10; * @param $TYPE$ $$$VARIABLE$&#10; * @return $this&#10; */&#10;public function set$NAME$($RETURN$ $$$VARIABLE$): self&#10;{&#10;&#9;$this-&gt;$PROPERTY$ = $$$VARIABLE$;&#10;&#10;&#9;return $this;&#10;}" description="Setter" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="&quot;something&quot;" alwaysStopAt="true" />
     <variable name="TYPE" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="RETURN" expression="TYPE" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="capitalize(camelCase(PROPERTY))" defaultValue="" alwaysStopAt="false" />
     <variable name="VARIABLE" expression="camelCase(PROPERTY)" defaultValue="" alwaysStopAt="false" />
     <context>
