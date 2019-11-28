@@ -2,45 +2,43 @@
   <component name="FileTypeManager" version="17">
     <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
     <extensionMap>
-      <mapping pattern="*.js.flow" type="Flow" />
-      <mapping pattern="*.js.flow" type="Flow" />
       <mapping pattern="installer" type="PHP" />
-      <mapping pattern="exo-craft" type="PHP" />
-      <mapping pattern="exolnet-scaffold" type="PHP" />
       <mapping pattern="compile" type="PHP" />
-      <mapping pattern="shift" type="PHP" />
-      <mapping pattern="EmployeeService" type="PHP" />
-      <mapping pattern="exo" type="PHP" />
+      <mapping pattern="exo-craft" type="PHP" />
       <mapping pattern="RoyalPhotoIndexer" type="PHP" />
-      <mapping pattern="LICENSE" type="PLAIN_TEXT" />
-      <mapping pattern="VERSION" type="PLAIN_TEXT" />
-      <mapping pattern="id_rsa" type="PLAIN_TEXT" />
-      <mapping pattern="DashboardWrapper" type="PLAIN_TEXT" />
-      <mapping pattern="TagSet" type="PLAIN_TEXT" />
-      <mapping pattern="FormTableInlineAdd" type="PLAIN_TEXT" />
-      <mapping pattern="ScenarioAnalysisUnaffecting" type="PLAIN_TEXT" />
+      <mapping pattern="EmployeeService" type="PHP" />
+      <mapping pattern="exolnet-scaffold" type="PHP" />
+      <mapping pattern="shift" type="PHP" />
+      <mapping pattern="exo" type="PHP" />
       <mapping pattern="NewsletterNotificationsTest" type="PLAIN_TEXT" />
-      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
-      <mapping pattern=".env.development" type="PLAIN_TEXT" />
-      <mapping pattern=".eslint" type="PLAIN_TEXT" />
       <mapping pattern=".env.testing" type="PLAIN_TEXT" />
-      <mapping pattern=".env.dusk.testing" type="PLAIN_TEXT" />
-      <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
+      <mapping pattern="DashboardWrapper" type="PLAIN_TEXT" />
+      <mapping pattern="MigrateCommand" type="PLAIN_TEXT" />
       <mapping pattern="Gemfile" type="PLAIN_TEXT" />
+      <mapping pattern=".env.development" type="PLAIN_TEXT" />
+      <mapping pattern="ScenarioAnalysisUnaffecting" type="PLAIN_TEXT" />
       <mapping pattern="README" type="PLAIN_TEXT" />
+      <mapping pattern=".eslint" type="PLAIN_TEXT" />
+      <mapping pattern="LICENSE" type="PLAIN_TEXT" />
+      <mapping pattern=".env.dusk.testing" type="PLAIN_TEXT" />
+      <mapping pattern="FormTableInlineAdd" type="PLAIN_TEXT" />
+      <mapping pattern="TagSet" type="PLAIN_TEXT" />
+      <mapping pattern="VERSION" type="PLAIN_TEXT" />
       <mapping pattern="EventUser" type="PLAIN_TEXT" />
       <mapping pattern="kohana-to-laravel-migrator" type="PLAIN_TEXT" />
+      <mapping pattern="id_rsa" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping pattern="REVISION" type="PLAIN_TEXT" />
-      <mapping pattern="MigrateCommand" type="PLAIN_TEXT" />
-      <mapping ext="editorconfig" type="PLAIN_TEXT" />
-      <mapping ext="pub" type="PLAIN_TEXT" />
-      <mapping ext="bak" type="PLAIN_TEXT" />
-      <mapping ext="example" type="PLAIN_TEXT" />
+      <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping ext="dat" type="PLAIN_TEXT" />
       <mapping ext="gitkeep" type="PLAIN_TEXT" />
+      <mapping ext="key" type="PLAIN_TEXT" />
+      <mapping ext="example" type="PLAIN_TEXT" />
       <mapping ext="cache" type="PLAIN_TEXT" />
       <mapping ext="keys" type="PLAIN_TEXT" />
-      <mapping ext="key" type="PLAIN_TEXT" />
+      <mapping ext="pub" type="PLAIN_TEXT" />
+      <mapping ext="editorconfig" type="PLAIN_TEXT" />
+      <mapping ext="bak" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
