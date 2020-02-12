@@ -379,4 +379,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="@void" value="@return void" description="phpDoc for a void function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
 </templateSet>
