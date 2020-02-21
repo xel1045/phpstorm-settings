@@ -245,9 +245,8 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="t" value="public function test$NAME$($ARGUMENTS$)&#10;{&#10;&#9;$END$&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
+  <template name="t" value="/**&#10; * @return void&#10; */&#10;public function test$NAME$(): void&#10;{&#10;&#9;$END$&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
     </context>
