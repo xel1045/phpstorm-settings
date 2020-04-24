@@ -40,6 +40,7 @@
       <mapping ext="bak" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
       <mapping ext="j2" type="Twig" />
       <mapping pattern=".ebextensions/autoscaling.config" type="YAML" />
       <mapping ext="config" type="YAML" />
