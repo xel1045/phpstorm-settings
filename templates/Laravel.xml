@@ -1,0 +1,31 @@
+<templateSet group="Laravel">
+  <template name="lrbtm" value="/**&#10; * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany&#10; */&#10;public function $NAME$(): BelongsToMany&#10;{&#10;    return $this-&gt;belongsToMany($CLASS$::class, '$TABLE$');&#10;}" description="Laravel Relation BelongsToMany" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="lrhm" value="/**&#10; * @return \Illuminate\Database\Eloquent\Relations\HasMany&#10; */&#10;public function $NAME$(): HasMany&#10;{&#10;    return $this-&gt;hasMany($CLASS$::class);&#10;}" description="Laravel Relation HasMany" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="lrho" value="/**&#10; * @return \Illuminate\Database\Eloquent\Relations\HasOne&#10; */&#10;public function $NAME$(): HasOne&#10;{&#10;    return $this-&gt;hasOne($CLASS$::class);&#10;}" description="Laravel Relation HasOne" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="lrbt" value="/**&#10; * @return \Illuminate\Database\Eloquent\Relations\BelongsTo&#10; */&#10;public function $NAME$(): BelongsTo&#10;{&#10;    return $this-&gt;belongsTo($CLASS$::class);&#10;}" description="Laravel Relation BelongsTo" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+</templateSet>
