@@ -245,7 +245,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="t" value="/**&#10; * @return void&#10; */&#10;public function test$NAME$(): void&#10;{&#10;&#9;$END$&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
+  <template name="t" value="/**&#10; * @return void&#10; * @test&#10; */&#10;public function test$NAME$(): void&#10;{&#10;    $END$&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
@@ -381,6 +381,13 @@
   <template name="@void" value="@return void" description="phpDoc for a void function" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="tmc" value="/**&#10; * @return void&#10; * @test&#10; */&#10;public function testCreation(): void&#10;{&#10;    $$$VARIABLE$ = factory($CLASS$::class)-&gt;create();&#10;&#10;    $this-&gt;assertInstanceOf($CLASS$::class, $$$VARIABLE$);&#10;}" description="Test template" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="&quot;Model&quot;" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="camelCase(CLASS)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>
