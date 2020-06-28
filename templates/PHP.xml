@@ -5,4 +5,15 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="@phpcs:disable" value="@phpcs:disable $RULE$" description="@phpcs:disable rule" toReformat="false" toShortenFQNames="true">
+    <variable name="RULE" expression="" defaultValue="&quot;Generic.Files.LineLength.TooLong&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="@phpcs:enable" value="@phpcs:enable" description="@phpcs:enable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
 </templateSet>
