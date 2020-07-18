@@ -18,14 +18,14 @@
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP">
-        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php@7.3/7.3.13/bin/php-cgi" php_cli="/usr/local/Cellar/php@7.3/7.3.13/bin/php" path_separator=":" version="7.3.13">
-          <additional_php_ini>/usr/local/etc/php/7.3/conf.d/exolnet-ext-imagick.ini, /usr/local/etc/php/7.3/conf.d/exolnet-ext-xdebug.ini, /usr/local/etc/php/7.3/conf.d/ext-opcache.ini</additional_php_ini>
+        <phpinfo binary_type="PHP" php_cgi="/usr/local/Cellar/php@7.3/7.3.20/bin/php-cgi" php_cli="/usr/local/Cellar/php@7.3/7.3.20/bin/php" path_separator=":" version="7.3.20">
+          <additional_php_ini>/usr/local/etc/php/7.3/conf.d/exolnet-ext-imagick.ini, /usr/local/etc/php/7.3/conf.d/exolnet-ext-pcov.ini, /usr/local/etc/php/7.3/conf.d/exolnet-ext-redis.ini, /usr/local/etc/php/7.3/conf.d/exolnet-ext-xdebug.ini, /usr/local/etc/php/7.3/conf.d/ext-opcache.ini</additional_php_ini>
           <configuration_file>/usr/local/etc/php/7.3/php.ini</configuration_file>
           <configuration_options>
-            <configuration_option name="include_path" value=".:/usr/local/Cellar/php@7.3/7.3.13/share/php@7.3/pear" />
+            <configuration_option name="include_path" value=".:/usr/local/Cellar/php@7.3/7.3.20/share/php@7.3/pear" />
           </configuration_options>
           <debuggers>
-            <debugger_info debugger="xdebug" debugger_version="2.9.0">
+            <debugger_info debugger="xdebug" debugger_version="2.9.6">
               <debug_extensions />
             </debugger_info>
           </debuggers>
@@ -66,6 +66,7 @@
             <extension name="odbc" />
             <extension name="openssl" />
             <extension name="pcntl" />
+            <extension name="pcov" />
             <extension name="pcre" />
             <extension name="pdo_dblib" />
             <extension name="pdo_mysql" />
@@ -76,6 +77,7 @@
             <extension name="posix" />
             <extension name="pspell" />
             <extension name="readline" />
+            <extension name="redis" />
             <extension name="session" />
             <extension name="shmop" />
             <extension name="soap" />
