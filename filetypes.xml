@@ -28,6 +28,7 @@
       <mapping pattern="kohana-to-laravel-migrator" type="PLAIN_TEXT" />
       <mapping pattern=".env.dusk.testing" type="PLAIN_TEXT" />
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping pattern=".browserslistrc" type="PLAIN_TEXT" />
       <mapping pattern="id_rsa" type="PLAIN_TEXT" />
       <mapping ext="cache" type="PLAIN_TEXT" />
       <mapping ext="bak" type="PLAIN_TEXT" />
