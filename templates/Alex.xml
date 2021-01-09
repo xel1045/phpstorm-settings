@@ -390,4 +390,11 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="@bvar" value="@php&#10;    /** @var $CLASS$ $$$VARIABLE$ */&#10;@endphp" description="Blade template @var annotation" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="&quot;\\stdClass&quot;" alwaysStopAt="true" />
+    <variable name="VARIABLE" expression="" defaultValue="&quot;variable&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
 </templateSet>
